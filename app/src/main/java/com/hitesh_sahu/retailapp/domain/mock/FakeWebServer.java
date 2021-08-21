@@ -150,6 +150,67 @@ public class FakeWebServer {
 //                        "0",
 //                        "http://img6a.flixcart.com/image/microwave-new/y/k/m/ifb-25sc4-400x400-imaef2pztynvqjaf.jpeg",
 //                        "oven_5"));
+//
+//        ArrayList<Product> tvList = new ArrayList<Product>();
+//
+//        // TV
+//        tvList.add(new Product(
+//                "LED",
+//                "Vu 80cm (32) HD Ready LED TV",
+//                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
+//                "16000",
+//                "12",
+//                "13990",
+//                "0",
+//                "http://img5a.flixcart.com/image/television/g/y/w/vu-32k160mrevd-400x400-imae93ahpwtchzys.jpeg",
+//                "tv_1"));
+//
+//        tvList.add(new Product(
+//                "LED 1",
+//                "Vu 80cm (32) HD Ready LED TV",
+//                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
+//                "17000",
+//                "12",
+//                "13990",
+//                "0",
+//                "http://img6a.flixcart.com/image/television/z/f/w/bpl-bpl080d51h-400x400-imaeeztqvhxbnam2.jpeg",
+//                "tv_2"));
+//
+//        tvList.add(new Product(
+//                "LED 2",
+//                "Vu 80cm (32) HD Ready LED TV",
+//                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
+//                "18000",
+//                "12",
+//                "13990",
+//                "0",
+//                "http://img6a.flixcart.com/image/television/f/b/z/micromax-43x6300mhd-400x400-imaednxv8bgznhbx.jpeg",
+//                "tv_3"));
+//
+//        tvList.add(new Product(
+//                "LED 3",
+//                "Vu 80cm (32) HD Ready LED TV",
+//                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
+//                "16000",
+//                "12",
+//                "13990",
+//                "0",
+//                "http://img6a.flixcart.com/image/television/a/w/z/vu-32d6545-400x400-imaebagzbpzqhmxc.jpeg",
+//                "tv_4"));
+//
+//        tvList.add(new Product(
+//                "LED 4",
+//                "Vu 80cm (32) HD Ready LED TV",
+//                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
+//                "16000",
+//                "12",
+//                "13990",
+//                "0",
+//                "http://img6a.flixcart.com/image/television/s/r/t/lg-32lf550a-400x400-imae8nyvxyjds3qu.jpeg",
+//                "tv_5"));
+//
+//        productMap.put("Television", tvList);
+
 
         try {
             URL url = new URL("http://192.168.0.105:9081/products");
@@ -169,67 +230,6 @@ public class FakeWebServer {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-        ArrayList<Product> tvList = new ArrayList<Product>();
-
-        // TV
-        tvList.add(new Product(
-                "LED",
-                "Vu 80cm (32) HD Ready LED TV",
-                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
-                "16000",
-                "12",
-                "13990",
-                "0",
-                "http://img5a.flixcart.com/image/television/g/y/w/vu-32k160mrevd-400x400-imae93ahpwtchzys.jpeg",
-                "tv_1"));
-
-        tvList.add(new Product(
-                "LED 1",
-                "Vu 80cm (32) HD Ready LED TV",
-                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
-                "17000",
-                "12",
-                "13990",
-                "0",
-                "http://img6a.flixcart.com/image/television/z/f/w/bpl-bpl080d51h-400x400-imaeeztqvhxbnam2.jpeg",
-                "tv_2"));
-
-        tvList.add(new Product(
-                "LED 2",
-                "Vu 80cm (32) HD Ready LED TV",
-                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
-                "18000",
-                "12",
-                "13990",
-                "0",
-                "http://img6a.flixcart.com/image/television/f/b/z/micromax-43x6300mhd-400x400-imaednxv8bgznhbx.jpeg",
-                "tv_3"));
-
-        tvList.add(new Product(
-                "LED 3",
-                "Vu 80cm (32) HD Ready LED TV",
-                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
-                "16000",
-                "12",
-                "13990",
-                "0",
-                "http://img6a.flixcart.com/image/television/a/w/z/vu-32d6545-400x400-imaebagzbpzqhmxc.jpeg",
-                "tv_4"));
-
-        tvList.add(new Product(
-                "LED 4",
-                "Vu 80cm (32) HD Ready LED TV",
-                "Enjoy movie night with the family on this 80cm LED TV from Vu. With an A+ grade panel, this TV renders crisp details that make what you're watching look realistic.",
-                "16000",
-                "12",
-                "13990",
-                "0",
-                "http://img6a.flixcart.com/image/television/s/r/t/lg-32lf550a-400x400-imae8nyvxyjds3qu.jpeg",
-                "tv_5"));
-
-        productMap.put("Television", tvList);
 
         ArrayList<Product> productlist = new ArrayList<Product>();
 

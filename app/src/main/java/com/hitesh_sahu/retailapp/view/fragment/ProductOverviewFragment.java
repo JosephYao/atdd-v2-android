@@ -26,13 +26,10 @@ import android.view.ViewGroup;
 import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.hitesh_sahu.retailapp.R;
 import com.hitesh_sahu.retailapp.domain.api.ProductOverviewTask;
-import com.hitesh_sahu.retailapp.model.CenterRepository;
 import com.hitesh_sahu.retailapp.util.Utils;
 import com.hitesh_sahu.retailapp.util.Utils.AnimationType;
 import com.hitesh_sahu.retailapp.view.activities.ECartHomeActivity;
 import com.hitesh_sahu.retailapp.view.adapter.ProductsInCategoryPagerAdapter;
-
-import java.util.Set;
 
 public class ProductOverviewFragment extends Fragment {
 
@@ -51,8 +48,6 @@ public class ProductOverviewFragment extends Fragment {
                 container, false);
 
         getActivity().setTitle("Products");
-
-        new ProductOverviewTask().execute();
 
         // TODO We Can use Async task But pallete creation is problemitic job
         // will
@@ -116,6 +111,8 @@ public class ProductOverviewFragment extends Fragment {
                 return true;
             }
         });
+
+        new ProductOverviewTask(viewPager, tabLayout, getActivity()).execute();
 
         return view;
     }
@@ -244,14 +241,9 @@ public class ProductOverviewFragment extends Fragment {
     private void setupViewPager(ViewPager viewPager) {
         ProductsInCategoryPagerAdapter adapter = new ProductsInCategoryPagerAdapter(
                 getActivity().getSupportFragmentManager());
-        Set<String> keys = CenterRepository.getCenterRepository().getMapOfProductsInCategory()
-                .keySet();
-
-        for (String string : keys) {
-            adapter.addFrag(new ProductListFragment(string), string);
-        }
 
         viewPager.setAdapter(adapter);
+
 //		viewPager.setPageTransformer(true,
 //				Utils.currentPageTransformer(getActivity()));
     }
