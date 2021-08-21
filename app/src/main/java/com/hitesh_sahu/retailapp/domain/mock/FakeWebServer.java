@@ -278,7 +278,7 @@ public class FakeWebServer {
 //        productMap.put("Vaccum Cleaner", productlist);
 
         try {
-            URL url = new URL("http://192.168.0.105:9081/products");
+            URL url = new URL("http://192.168.0.105:9081/products?category=0");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
 
