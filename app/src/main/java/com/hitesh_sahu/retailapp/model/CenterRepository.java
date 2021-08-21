@@ -23,7 +23,7 @@ public class CenterRepository {
 
     private static CenterRepository centerRepository;
 
-    private ArrayList<ProductCategoryModel> listOfCategory = new ArrayList<ProductCategoryModel>();
+    private List<ProductCategoryModel> listOfCategory = new ArrayList<ProductCategoryModel>();
     private ConcurrentHashMap<String, ArrayList<Product>> mapOfProductsInCategory = new ConcurrentHashMap<String, ArrayList<Product>>();
     private List<Product> listOfProductsInShoppingList = Collections.synchronizedList(new ArrayList<Product>());
     private List<Set<String>> listOfItemSetsForDataMining = new ArrayList<>();
@@ -54,12 +54,12 @@ public class CenterRepository {
         this.mapOfProductsInCategory = mapOfProductsInCategory;
     }
 
-    public ArrayList<ProductCategoryModel> getListOfCategory() {
+    public List<ProductCategoryModel> getListOfCategory() {
 
         return listOfCategory;
     }
 
-    public void setListOfCategory(ArrayList<ProductCategoryModel> listOfCategory) {
+    public void setListOfCategory(List<ProductCategoryModel> listOfCategory) {
         this.listOfCategory = listOfCategory;
     }
 

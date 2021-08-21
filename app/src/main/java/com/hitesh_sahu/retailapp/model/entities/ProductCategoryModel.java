@@ -11,6 +11,9 @@
  */
 package com.hitesh_sahu.retailapp.model.entities;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * @author Hitesh
  */
@@ -20,14 +23,16 @@ public class ProductCategoryModel {
     private String categoryDescription;
     private String categoryDiscount;
     private String categoryImageUrl;
+
     /**
      * @param productCategoryName
      * @param productCategoryDescription
      * @param productCategoryDiscount
      * @param productCategoryUrl
      */
-    public ProductCategoryModel(String productCategoryName, String productCategoryDescription,
-                                String productCategoryDiscount, String productCategoryUrl) {
+    @JsonCreator
+    public ProductCategoryModel(@JsonProperty("categoryName") String productCategoryName, @JsonProperty("categoryDescription") String productCategoryDescription,
+                                @JsonProperty("categoryDiscount") String productCategoryDiscount, @JsonProperty("categoryImageUrl") String productCategoryUrl) {
         super();
         this.categoryName = productCategoryName;
         this.categoryDescription = productCategoryDescription;
