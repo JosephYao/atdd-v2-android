@@ -8,11 +8,20 @@
 
 package com.hitesh_sahu.retailapp.domain.mock;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hitesh_sahu.retailapp.model.CenterRepository;
 import com.hitesh_sahu.retailapp.model.entities.Product;
 import com.hitesh_sahu.retailapp.model.entities.ProductCategoryModel;
 
+import org.apache.commons.io.IOUtils;
+
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 /*
@@ -38,23 +47,40 @@ public class FakeWebServer {
 
     public void addCategory() {
 
-        ArrayList<ProductCategoryModel> listOfCategory = new ArrayList<ProductCategoryModel>();
+//        ArrayList<ProductCategoryModel> listOfCategory = new ArrayList<ProductCategoryModel>();
+//
+//        listOfCategory
+//                .add(new ProductCategoryModel(
+//                        "Electronic",
+//                        "Electric Items",
+//                        "10%",
+//                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeNSONF3fr9bZ6g0ztTAIPXPRCYN9vtKp1dXQB2UnBm8n5L34r"));
+//
+//        listOfCategory
+//                .add(new ProductCategoryModel(
+//                        "Furnitures",
+//                        "Furnitures Items",
+//                        "15%",
+//                        "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRaUR5_wzLgBOuNtkWjOxhgaYaPBm821Hb_71xTyQ-OdUd-ojMMvw"));
 
-        listOfCategory
-                .add(new ProductCategoryModel(
-                        "Electronic",
-                        "Electric Items",
-                        "10%",
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeNSONF3fr9bZ6g0ztTAIPXPRCYN9vtKp1dXQB2UnBm8n5L34r"));
+        try {
+            URL url = new URL("http://192.168.0.105:9081/product-categories");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
 
-        listOfCategory
-                .add(new ProductCategoryModel(
-                        "Furnitures",
-                        "Furnitures Items",
-                        "15%",
-                        "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRaUR5_wzLgBOuNtkWjOxhgaYaPBm821Hb_71xTyQ-OdUd-ojMMvw"));
+            InputStream in = new BufferedInputStream(conn.getInputStream());
+            String response = IOUtils.toString(in, "UTF-8");
+            System.out.println(response);
 
-        CenterRepository.getCenterRepository().setListOfCategory(listOfCategory);
+            ObjectMapper objectMapper = new ObjectMapper();
+            List<ProductCategoryModel> productCategories = objectMapper.readValue(response, new TypeReference<List<ProductCategoryModel>>() {
+            });
+
+            CenterRepository.getCenterRepository().setListOfCategory(productCategories);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void getAllElectronics() {
