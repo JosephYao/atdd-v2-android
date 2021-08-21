@@ -25,9 +25,8 @@ import android.view.ViewGroup;
 
 import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.hitesh_sahu.retailapp.R;
-import com.hitesh_sahu.retailapp.domain.mock.FakeWebServer;
+import com.hitesh_sahu.retailapp.domain.api.ProductOverviewTask;
 import com.hitesh_sahu.retailapp.model.CenterRepository;
-import com.hitesh_sahu.retailapp.util.AppConstants;
 import com.hitesh_sahu.retailapp.util.Utils;
 import com.hitesh_sahu.retailapp.util.Utils.AnimationType;
 import com.hitesh_sahu.retailapp.view.activities.ECartHomeActivity;
@@ -53,9 +52,7 @@ public class ProductOverviewFragment extends Fragment {
 
         getActivity().setTitle("Products");
 
-        // Simulate Web service calls
-        FakeWebServer.getFakeWebServer().getAllProducts(
-                AppConstants.CURRENT_CATEGORY);
+        new ProductOverviewTask().execute();
 
         // TODO We Can use Async task But pallete creation is problemitic job
         // will

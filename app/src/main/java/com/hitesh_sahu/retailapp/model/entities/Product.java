@@ -11,6 +11,9 @@
  */
 package com.hitesh_sahu.retailapp.model.entities;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * The Class Product used as model for Products.
  *
@@ -71,9 +74,10 @@ public class Product {
      * @param quantity
      * @param imageURL
      */
-    public Product(String itemName, String itemShortDesc, String itemDetail,
-                   String MRP, String discount, String sellMRP, String quantity,
-                   String imageURL, String orderId) {
+    @JsonCreator
+    public Product(@JsonProperty("productName") String itemName, @JsonProperty("description") String itemShortDesc, @JsonProperty("longDescription") String itemDetail,
+                   @JsonProperty("mrp") String MRP, @JsonProperty("discount") String discount, @JsonProperty("salePrice") String sellMRP, @JsonProperty("orderQty") String quantity,
+                   @JsonProperty("imageUrl") String imageURL, @JsonProperty("productId") String orderId) {
         this.productName = itemName;
         this.description = itemShortDesc;
         this.longDescription = itemDetail;

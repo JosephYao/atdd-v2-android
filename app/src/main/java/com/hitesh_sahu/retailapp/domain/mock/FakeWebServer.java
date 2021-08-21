@@ -22,6 +22,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /*
@@ -85,72 +86,90 @@ public class FakeWebServer {
 
     public void getAllElectronics() {
 
-        ConcurrentHashMap<String, ArrayList<Product>> productMap = new ConcurrentHashMap<String, ArrayList<Product>>();
+        ConcurrentHashMap<String, List<Product>> productMap = new ConcurrentHashMap<>();
 
-        ArrayList<Product> productlist = new ArrayList<Product>();
+//        ArrayList<Product> productlist = new ArrayList<Product>();
+//
+//        // Ovens
+//        productlist
+//                .add(new Product(
+//                        "Solo Microwave Oven",
+//                        "IFB 17PMMEC1 17 L Solo Microwave Oven",
+//                        "Explore the joys of cooking with IFB 17PM MEC1 Solo Microwave Oven. The budget-friendly appliance has several nifty features including Multi Power Levels and Speed Defrost to make cooking a fun-filled experience.",
+//                        "5490",
+//                        "10",
+//                        "4290",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/microwave-new/3/3/z/ifb-17pmmec1-400x400-imae4g4uzzjsumhk.jpeg",
+//                        "oven_1"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Solo Microwave Oven",
+//                        "Bajaj 1701MT 17 L Solo Microwave Oven",
+//                        "Explore the joys of cooking with IFB 17PM MEC1 Solo Microwave Oven. The budget-friendly appliance has several nifty features including Multi Power Levels and Speed Defrost to make cooking a fun-filled experience.",
+//                        "5000",
+//                        "10",
+//                        "4290",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
+//                        "oven_2"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Solo Microwave Oven",
+//                        "Whirlpool MW 25 BG 25 L Grill Microwave Oven",
+//                        "http://img6a.flixcart.com/image/microwave-new/a/y/f/whirlpool-mw-25-bg-400x400-imaebagzstnngjqt.jpeg",
+//                        "5290",
+//                        "10",
+//                        "4290",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
+//                        "oven_3"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Solo Microwave Oven",
+//                        "Morphy Richards 25CG 25 L Convection Microwave Oven",
+//                        "http://img5a.flixcart.com/image/microwave-new/v/q/y/morphy-richard-25cg-400x400-imadxecx93kb6q4f.jpeg",
+//                        "5300",
+//                        "12",
+//                        "4290",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
+//                        "oven_4"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Solo Microwave Oven",
+//                        "IFB 25SC4 25 L Convection Microwave Oven",
+//                        "http://img5a.flixcart.com/image/microwave-new/v/q/y/morphy-richard-25cg-400x400-imadxecx93kb6q4f.jpeg",
+//                        "5190",
+//                        "10",
+//                        "4290",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/microwave-new/y/k/m/ifb-25sc4-400x400-imaef2pztynvqjaf.jpeg",
+//                        "oven_5"));
 
-        // Ovens
-        productlist
-                .add(new Product(
-                        "Solo Microwave Oven",
-                        "IFB 17PMMEC1 17 L Solo Microwave Oven",
-                        "Explore the joys of cooking with IFB 17PM MEC1 Solo Microwave Oven. The budget-friendly appliance has several nifty features including Multi Power Levels and Speed Defrost to make cooking a fun-filled experience.",
-                        "5490",
-                        "10",
-                        "4290",
-                        "0",
-                        "http://img6a.flixcart.com/image/microwave-new/3/3/z/ifb-17pmmec1-400x400-imae4g4uzzjsumhk.jpeg",
-                        "oven_1"));
+        try {
+            URL url = new URL("http://192.168.0.105:9081/products");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
 
-        productlist
-                .add(new Product(
-                        "Solo Microwave Oven",
-                        "Bajaj 1701MT 17 L Solo Microwave Oven",
-                        "Explore the joys of cooking with IFB 17PM MEC1 Solo Microwave Oven. The budget-friendly appliance has several nifty features including Multi Power Levels and Speed Defrost to make cooking a fun-filled experience.",
-                        "5000",
-                        "10",
-                        "4290",
-                        "0",
-                        "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
-                        "oven_2"));
+            InputStream in = new BufferedInputStream(conn.getInputStream());
+            String response = IOUtils.toString(in, "UTF-8");
+            System.out.println(response);
 
-        productlist
-                .add(new Product(
-                        "Solo Microwave Oven",
-                        "Whirlpool MW 25 BG 25 L Grill Microwave Oven",
-                        "http://img6a.flixcart.com/image/microwave-new/a/y/f/whirlpool-mw-25-bg-400x400-imaebagzstnngjqt.jpeg",
-                        "5290",
-                        "10",
-                        "4290",
-                        "0",
-                        "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
-                        "oven_3"));
+            ObjectMapper objectMapper = new ObjectMapper();
+            Map<String, List<Product>> allProducts = objectMapper.readValue(response, new TypeReference<Map<String, List<Product>>>() {
+            });
 
-        productlist
-                .add(new Product(
-                        "Solo Microwave Oven",
-                        "Morphy Richards 25CG 25 L Convection Microwave Oven",
-                        "http://img5a.flixcart.com/image/microwave-new/v/q/y/morphy-richard-25cg-400x400-imadxecx93kb6q4f.jpeg",
-                        "5300",
-                        "12",
-                        "4290",
-                        "0",
-                        "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
-                        "oven_4"));
+            productMap.putAll(allProducts);
 
-        productlist
-                .add(new Product(
-                        "Solo Microwave Oven",
-                        "IFB 25SC4 25 L Convection Microwave Oven",
-                        "http://img5a.flixcart.com/image/microwave-new/v/q/y/morphy-richard-25cg-400x400-imadxecx93kb6q4f.jpeg",
-                        "5190",
-                        "10",
-                        "4290",
-                        "0",
-                        "http://img6a.flixcart.com/image/microwave-new/y/k/m/ifb-25sc4-400x400-imaef2pztynvqjaf.jpeg",
-                        "oven_5"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        productMap.put("Microwave oven", productlist);
 
         ArrayList<Product> tvList = new ArrayList<Product>();
 
@@ -212,7 +231,7 @@ public class FakeWebServer {
 
         productMap.put("Television", tvList);
 
-        productlist = new ArrayList<Product>();
+        ArrayList<Product> productlist = new ArrayList<Product>();
 
         // Vaccum Cleaner
         productlist
@@ -284,7 +303,7 @@ public class FakeWebServer {
 
     public void getAllFurnitures() {
 
-        ConcurrentHashMap<String, ArrayList<Product>> productMap = new ConcurrentHashMap<String, ArrayList<Product>>();
+        ConcurrentHashMap<String, List<Product>> productMap = new ConcurrentHashMap<String, List<Product>>();
 
         ArrayList<Product> productlist = new ArrayList<Product>();
 
