@@ -212,6 +212,71 @@ public class FakeWebServer {
 //        productMap.put("Television", tvList);
 
 
+//        ArrayList<Product> productlist = new ArrayList<Product>();
+//
+//        // Vaccum Cleaner
+//        productlist
+//                .add(new Product(
+//                        "Easy Clean Plus Hand-held ",
+//                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
+//                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
+//                        "2699",
+//                        "10",
+//                        "2566",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/vacuum-cleaner/e/e/g/eureka-forbes-easy-clean-easy-clean-plus-400x400-imae7dam5ey3vaeb.jpeg",
+//                        "v_cleaner_1"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Easy Clean Plus Hand-held ",
+//                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
+//                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
+//                        "2699",
+//                        "10",
+//                        "2566",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/vacuum-cleaner/j/e/x/nova-vc-761h-plus-vacuum-cleaner-400x400-imaecmhyadgxzzpg.jpeg",
+//                        "v_cleaner_2"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Easy Clean Plus Hand-held ",
+//                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
+//                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
+//                        "2699",
+//                        "10",
+//                        "2566",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/vacuum-cleaner/y/g/b/eureka-forbes-car-clean-car-clean-400x400-imae376v2kta5utj.jpeg",
+//                        "v_cleaner_3"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Easy Clean Plus Hand-held ",
+//                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
+//                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
+//                        "2699",
+//                        "10",
+//                        "2566",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/vacuum-cleaner/m/y/g/sarita-115-400x400-imae9b5zhzjagykx.jpeg",
+//                        "v_cleaner_4"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Easy Clean Plus Hand-held ",
+//                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
+//                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
+//                        "2699",
+//                        "10",
+//                        "2566",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/vacuum-cleaner/s/c/j/eureka-forbes-trendy-steel-trendy-steel-400x400-imae7vashkfj2hgk.jpeg",
+//                        "v_cleaner_5"));
+//
+//        productMap.put("Vaccum Cleaner", productlist);
+
         try {
             URL url = new URL("http://192.168.0.105:9081/products");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -230,72 +295,6 @@ public class FakeWebServer {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        ArrayList<Product> productlist = new ArrayList<Product>();
-
-        // Vaccum Cleaner
-        productlist
-                .add(new Product(
-                        "Easy Clean Plus Hand-held ",
-                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
-                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
-                        "2699",
-                        "10",
-                        "2566",
-                        "0",
-                        "http://img5a.flixcart.com/image/vacuum-cleaner/e/e/g/eureka-forbes-easy-clean-easy-clean-plus-400x400-imae7dam5ey3vaeb.jpeg",
-                        "v_cleaner_1"));
-
-        productlist
-                .add(new Product(
-                        "Easy Clean Plus Hand-held ",
-                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
-                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
-                        "2699",
-                        "10",
-                        "2566",
-                        "0",
-                        "http://img6a.flixcart.com/image/vacuum-cleaner/j/e/x/nova-vc-761h-plus-vacuum-cleaner-400x400-imaecmhyadgxzzpg.jpeg",
-                        "v_cleaner_2"));
-
-        productlist
-                .add(new Product(
-                        "Easy Clean Plus Hand-held ",
-                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
-                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
-                        "2699",
-                        "10",
-                        "2566",
-                        "0",
-                        "http://img6a.flixcart.com/image/vacuum-cleaner/y/g/b/eureka-forbes-car-clean-car-clean-400x400-imae376v2kta5utj.jpeg",
-                        "v_cleaner_3"));
-
-        productlist
-                .add(new Product(
-                        "Easy Clean Plus Hand-held ",
-                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
-                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
-                        "2699",
-                        "10",
-                        "2566",
-                        "0",
-                        "http://img5a.flixcart.com/image/vacuum-cleaner/m/y/g/sarita-115-400x400-imae9b5zhzjagykx.jpeg",
-                        "v_cleaner_4"));
-
-        productlist
-                .add(new Product(
-                        "Easy Clean Plus Hand-held ",
-                        "Eureka Forbes Easy Clean Plus Hand-held Vacuum Cleaner",
-                        "The Eureka Forbes Easy Clean vacuum cleaner is best for those who are looking for a machine that makes cleaning easier and is convenient to use. It is a compact and powerful machine with high suction and low power consumption.",
-                        "2699",
-                        "10",
-                        "2566",
-                        "0",
-                        "http://img6a.flixcart.com/image/vacuum-cleaner/s/c/j/eureka-forbes-trendy-steel-trendy-steel-400x400-imae7vashkfj2hgk.jpeg",
-                        "v_cleaner_5"));
-
-        productMap.put("Vaccum Cleaner", productlist);
-
 
         CenterRepository.getCenterRepository().setMapOfProductsInCategory(productMap);
 
