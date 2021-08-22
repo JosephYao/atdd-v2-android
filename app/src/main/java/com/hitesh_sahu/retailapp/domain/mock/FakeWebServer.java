@@ -381,6 +381,119 @@ public class FakeWebServer {
 //
 //        productMap.put("Tables", productlist);
 
+//        ArrayList<Product> productlist = new ArrayList<Product>();
+//
+//        // Chair
+//        productlist
+//                .add(new Product(
+//                        "Bean Bag Chair Cover",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/bean-bag/5/b/b/boss-moda-chair-br1088-comf-on-xxxl-400x400-imae9k78vg8gjh3q.jpeg",
+//                        "chair_1"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Bean Bag Chair Cover",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/office-study-chair/e/f/p/flversaossblu-stainless-steel-nilkamal-400x400-imaeeptqczc5kbjg.jpeg",
+//                        "chair_2"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Bean Bag Chair Cover",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/bean-bag/7/w/b/chr-01-fab-homez-xxxl-400x400-imae9qnbfwr9vkk4.jpeg",
+//                        "chair_3"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Adiko Leatherette Office Chair",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/office-study-chair/h/z/d/adxn275-pu-leatherette-adiko-400x400-imaedpmyhzefdzgz.jpeg",
+//                        "chair_4"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Adiko Leatherette Office Chair",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/office-study-chair/h/z/d/adxn275-pu-leatherette-adiko-400x400-imaedpmyytefgvz7.jpeg",
+//                        "chair_5"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Adiko Leatherette Office Chair",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/office-study-chair/j/y/q/adpn-d021-pp-adiko-400x400-imaee2vrg9bkkxjg.jpeg",
+//                        "chair_6"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Adiko Leatherette Office Chair",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/office-study-chair/k/s/2/adxn-034-pu-leatherette-adiko-400x400-imaedpmyyyg8bdmv.jpeg",
+//                        "chair_7"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Adiko Leatherette Office Chair",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/bean-bag/t/8/n/fk0100391-star-xxxl-400x400-imae72dsb5h2r9uj.jpeg",
+//                        "chair_8"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Adiko Leatherette Office Chair",
+//                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "36500",
+//                        "20",
+//                        "1200",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/bean-bag/3/h/w/rydclassicgreenl-rockyard-large-400x400-imae6zfaz6qzj3jd.jpeg",
+//                        "chair_9"));
+//
+//        productMap.put("Chairs", productlist);
+
         try {
             URL url = new URL("http://192.168.0.105:9081/products?category=1");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -401,119 +514,6 @@ public class FakeWebServer {
         }
 
         ArrayList<Product> productlist = new ArrayList<Product>();
-
-        // Chair
-        productlist
-                .add(new Product(
-                        "Bean Bag Chair Cover",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img5a.flixcart.com/image/bean-bag/5/b/b/boss-moda-chair-br1088-comf-on-xxxl-400x400-imae9k78vg8gjh3q.jpeg",
-                        "chair_1"));
-
-        productlist
-                .add(new Product(
-                        "Bean Bag Chair Cover",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img6a.flixcart.com/image/office-study-chair/e/f/p/flversaossblu-stainless-steel-nilkamal-400x400-imaeeptqczc5kbjg.jpeg",
-                        "chair_2"));
-
-        productlist
-                .add(new Product(
-                        "Bean Bag Chair Cover",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img5a.flixcart.com/image/bean-bag/7/w/b/chr-01-fab-homez-xxxl-400x400-imae9qnbfwr9vkk4.jpeg",
-                        "chair_3"));
-
-        productlist
-                .add(new Product(
-                        "Adiko Leatherette Office Chair",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img5a.flixcart.com/image/office-study-chair/h/z/d/adxn275-pu-leatherette-adiko-400x400-imaedpmyhzefdzgz.jpeg",
-                        "chair_4"));
-
-        productlist
-                .add(new Product(
-                        "Adiko Leatherette Office Chair",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img5a.flixcart.com/image/office-study-chair/h/z/d/adxn275-pu-leatherette-adiko-400x400-imaedpmyytefgvz7.jpeg",
-                        "chair_5"));
-
-        productlist
-                .add(new Product(
-                        "Adiko Leatherette Office Chair",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img6a.flixcart.com/image/office-study-chair/j/y/q/adpn-d021-pp-adiko-400x400-imaee2vrg9bkkxjg.jpeg",
-                        "chair_6"));
-
-        productlist
-                .add(new Product(
-                        "Adiko Leatherette Office Chair",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img6a.flixcart.com/image/office-study-chair/k/s/2/adxn-034-pu-leatherette-adiko-400x400-imaedpmyyyg8bdmv.jpeg",
-                        "chair_7"));
-
-        productlist
-                .add(new Product(
-                        "Adiko Leatherette Office Chair",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img6a.flixcart.com/image/bean-bag/t/8/n/fk0100391-star-xxxl-400x400-imae72dsb5h2r9uj.jpeg",
-                        "chair_8"));
-
-        productlist
-                .add(new Product(
-                        "Adiko Leatherette Office Chair",
-                        "ab Homez XXXL Bean Bag Chair Cover (Without Filling)",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "36500",
-                        "20",
-                        "1200",
-                        "0",
-                        "http://img5a.flixcart.com/image/bean-bag/3/h/w/rydclassicgreenl-rockyard-large-400x400-imae6zfaz6qzj3jd.jpeg",
-                        "chair_9"));
-
-        productMap.put("Chairs", productlist);
-
-        productlist = new ArrayList<Product>();
 
         // Chair
         productlist
