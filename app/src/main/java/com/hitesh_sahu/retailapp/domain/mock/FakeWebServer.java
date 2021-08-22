@@ -304,84 +304,103 @@ public class FakeWebServer {
 
         ConcurrentHashMap<String, List<Product>> productMap = new ConcurrentHashMap<String, List<Product>>();
 
+//        ArrayList<Product> productlist = new ArrayList<Product>();
+//
+//        // Table
+//        productlist
+//                .add(new Product(
+//                        " Wood Coffee Table",
+//                        "Royal Oak Engineered Wood Coffee Table",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "10200",
+//                        "12",
+//                        "7000",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/coffee-table/q/f/4/ct15bl-mdf-royal-oak-dark-400x400-imaeehkd8xuheh2u.jpeg",
+//                        "table_1"));
+//
+//        productlist
+//                .add(new Product(
+//                        " Wood Coffee Table",
+//                        "Royal Oak Engineered Wood Coffee Table",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "10200",
+//                        "12",
+//                        "7000",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/coffee-table/c/z/e/afr1096-sm-mango-wood-onlineshoppee-brown-400x400-imaea6c2bhwz8tns.jpeg",
+//                        "table_2"));
+//
+//        productlist
+//                .add(new Product(
+//                        " Wood Coffee Table",
+//                        "Royal Oak Engineered Wood Coffee Table",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "10200",
+//                        "12",
+//                        "7000",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/coffee-table/u/n/p/brass-table0016-rosewood-sheesham-zameerwazeer-beige-400x400-imaedwk5ksph9ut2.jpeg",
+//                        "table_3"));
+//
+//        productlist
+//                .add(new Product(
+//                        " Wood Coffee Table",
+//                        "Royal Oak Engineered Wood Coffee Table",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "10200",
+//                        "12",
+//                        "7000",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/coffee-table/v/h/h/side-tb-53-ad-particle-board-debono-acacia-dark-matt-400x400-imaecnctfgjahsnu.jpeg",
+//                        "table_4"));
+//
+//        productlist
+//                .add(new Product(
+//                        " Wood Coffee Table",
+//                        "Royal Oak Engineered Wood Coffee Table",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "10200",
+//                        "12",
+//                        "7000",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/coffee-table/c/z/e/afr1096-sm-mango-wood-onlineshoppee-brown-400x400-imaea6c2bhwz8tns.jpeg",
+//                        "table_5"));
+//
+//        productlist
+//                .add(new Product(
+//                        " Wood Coffee Table",
+//                        "Royal Oak Engineered Wood Coffee Table",
+//                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
+//                        "10200",
+//                        "12",
+//                        "7000",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/coffee-table/k/y/h/1-particle-board-wood-an-wood-coffee-400x400-imae7uvzqsf4ynan.jpeg",
+//                        "table_6"));
+//
+//        productMap.put("Tables", productlist);
+
+        try {
+            URL url = new URL("http://192.168.0.105:9081/products?category=1");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+
+            InputStream in = new BufferedInputStream(conn.getInputStream());
+            String response = IOUtils.toString(in, "UTF-8");
+            System.out.println(response);
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            Map<String, List<Product>> allProducts = objectMapper.readValue(response, new TypeReference<Map<String, List<Product>>>() {
+            });
+
+            productMap.putAll(allProducts);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         ArrayList<Product> productlist = new ArrayList<Product>();
-
-        // Table
-        productlist
-                .add(new Product(
-                        " Wood Coffee Table",
-                        "Royal Oak Engineered Wood Coffee Table",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "10200",
-                        "12",
-                        "7000",
-                        "0",
-                        "http://img6a.flixcart.com/image/coffee-table/q/f/4/ct15bl-mdf-royal-oak-dark-400x400-imaeehkd8xuheh2u.jpeg",
-                        "table_1"));
-
-        productlist
-                .add(new Product(
-                        " Wood Coffee Table",
-                        "Royal Oak Engineered Wood Coffee Table",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "10200",
-                        "12",
-                        "7000",
-                        "0",
-                        "http://img5a.flixcart.com/image/coffee-table/c/z/e/afr1096-sm-mango-wood-onlineshoppee-brown-400x400-imaea6c2bhwz8tns.jpeg",
-                        "table_2"));
-
-        productlist
-                .add(new Product(
-                        " Wood Coffee Table",
-                        "Royal Oak Engineered Wood Coffee Table",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "10200",
-                        "12",
-                        "7000",
-                        "0",
-                        "http://img5a.flixcart.com/image/coffee-table/u/n/p/brass-table0016-rosewood-sheesham-zameerwazeer-beige-400x400-imaedwk5ksph9ut2.jpeg",
-                        "table_3"));
-
-        productlist
-                .add(new Product(
-                        " Wood Coffee Table",
-                        "Royal Oak Engineered Wood Coffee Table",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "10200",
-                        "12",
-                        "7000",
-                        "0",
-                        "http://img6a.flixcart.com/image/coffee-table/v/h/h/side-tb-53-ad-particle-board-debono-acacia-dark-matt-400x400-imaecnctfgjahsnu.jpeg",
-                        "table_4"));
-
-        productlist
-                .add(new Product(
-                        " Wood Coffee Table",
-                        "Royal Oak Engineered Wood Coffee Table",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "10200",
-                        "12",
-                        "7000",
-                        "0",
-                        "http://img5a.flixcart.com/image/coffee-table/c/z/e/afr1096-sm-mango-wood-onlineshoppee-brown-400x400-imaea6c2bhwz8tns.jpeg",
-                        "table_5"));
-
-        productlist
-                .add(new Product(
-                        " Wood Coffee Table",
-                        "Royal Oak Engineered Wood Coffee Table",
-                        "With a contemporary design and gorgeous finish, this coffee table will be a brilliant addition to modern homes and even offices. The table has a glass table top with a floral print, and a pull-out drawer in the center.",
-                        "10200",
-                        "12",
-                        "7000",
-                        "0",
-                        "http://img5a.flixcart.com/image/coffee-table/k/y/h/1-particle-board-wood-an-wood-coffee-400x400-imae7uvzqsf4ynan.jpeg",
-                        "table_6"));
-
-        productMap.put("Tables", productlist);
-
-        productlist = new ArrayList<Product>();
 
         // Chair
         productlist
