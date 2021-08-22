@@ -20,7 +20,6 @@ import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -494,6 +493,85 @@ public class FakeWebServer {
 //
 //        productMap.put("Chairs", productlist);
 
+//        ArrayList<Product> productlist = new ArrayList<Product>();
+//
+//        // Chair
+//        productlist
+//                .add(new Product(
+//                        "l Collapsible Wardrobe",
+//                        "Everything Imported Carbon Steel Collapsible Wardrobe",
+//                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
+//                        "2999",
+//                        "20",
+//                        "1999",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/collapsible-wardrobe/h/h/g/best-quality-3-5-feet-foldable-storage-cabinet-almirah-shelf-400x400-imaees5fq7wbndak.jpeg",
+//                        "almirah_1"));
+//
+//        productlist
+//                .add(new Product(
+//                        "l Collapsible Wardrobe",
+//                        "Everything Imported Carbon Steel Collapsible Wardrobe",
+//                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
+//                        "2999",
+//                        "20",
+//                        "1999",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/collapsible-wardrobe/d/n/s/cb265-carbon-steel-cbeeso-dark-beige-400x400-imaefn9vha2hm9qk.jpeg",
+//                        "almirah_2"));
+//
+//        productlist
+//                .add(new Product(
+//                        "l Collapsible Wardrobe",
+//                        "Everything Imported Carbon Steel Collapsible Wardrobe",
+//                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
+//                        "2999",
+//                        "20",
+//                        "1999",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/wardrobe-closet/b/v/3/srw-146-jute-pindia-blue-400x400-imaeb9g4y6tegzfn.jpeg",
+//                        "almirah_3"));
+//
+//        productlist
+//                .add(new Product(
+//                        "l Collapsible Wardrobe",
+//                        "Everything Imported Carbon Steel Collapsible Wardrobe",
+//                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
+//                        "2999",
+//                        "20",
+//                        "1999",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/cupboard-almirah/y/w/q/100009052-particle-board-housefull-mahogany-400x400-imaebazkwhv64p8q.jpeg",
+//                        "almirah_4"));
+//
+//        productlist
+//                .add(new Product(
+//                        "l Collapsible Wardrobe",
+//                        "Everything Imported Carbon Steel Collapsible Wardrobe",
+//                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
+//                        "2999",
+//                        "20",
+//                        "1999",
+//                        "0",
+//                        "http://img5a.flixcart.com/image/collapsible-wardrobe/w/c/k/srw-116a-aluminium-pindia-maroon-wardrobe-400x400-imaeb9g4945dqunu.jpeg",
+//                        "almirah_5"));
+//
+//        productlist
+//                .add(new Product(
+//                        "Metal Free Standing Wardrobe",
+//                        "Everything Imported Carbon Steel Collapsible Wardrobe",
+//                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
+//                        "2999",
+//                        "20",
+//                        "1999",
+//                        "0",
+//                        "http://img6a.flixcart.com/image/wardrobe-closet/f/b/p/srw-167-jute-pindia-purple-400x400-imaeb9g4d8uvatck.jpeg",
+//                        "almirah_6"));
+//
+//        productMap.put("Almirah", productlist);
+//
+//        productMap.put("Almirah", productlist);
+
         try {
             URL url = new URL("http://192.168.0.105:9081/products?category=1");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -512,85 +590,6 @@ public class FakeWebServer {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        ArrayList<Product> productlist = new ArrayList<Product>();
-
-        // Chair
-        productlist
-                .add(new Product(
-                        "l Collapsible Wardrobe",
-                        "Everything Imported Carbon Steel Collapsible Wardrobe",
-                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
-                        "2999",
-                        "20",
-                        "1999",
-                        "0",
-                        "http://img5a.flixcart.com/image/collapsible-wardrobe/h/h/g/best-quality-3-5-feet-foldable-storage-cabinet-almirah-shelf-400x400-imaees5fq7wbndak.jpeg",
-                        "almirah_1"));
-
-        productlist
-                .add(new Product(
-                        "l Collapsible Wardrobe",
-                        "Everything Imported Carbon Steel Collapsible Wardrobe",
-                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
-                        "2999",
-                        "20",
-                        "1999",
-                        "0",
-                        "http://img6a.flixcart.com/image/collapsible-wardrobe/d/n/s/cb265-carbon-steel-cbeeso-dark-beige-400x400-imaefn9vha2hm9qk.jpeg",
-                        "almirah_2"));
-
-        productlist
-                .add(new Product(
-                        "l Collapsible Wardrobe",
-                        "Everything Imported Carbon Steel Collapsible Wardrobe",
-                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
-                        "2999",
-                        "20",
-                        "1999",
-                        "0",
-                        "http://img6a.flixcart.com/image/wardrobe-closet/b/v/3/srw-146-jute-pindia-blue-400x400-imaeb9g4y6tegzfn.jpeg",
-                        "almirah_3"));
-
-        productlist
-                .add(new Product(
-                        "l Collapsible Wardrobe",
-                        "Everything Imported Carbon Steel Collapsible Wardrobe",
-                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
-                        "2999",
-                        "20",
-                        "1999",
-                        "0",
-                        "http://img6a.flixcart.com/image/cupboard-almirah/y/w/q/100009052-particle-board-housefull-mahogany-400x400-imaebazkwhv64p8q.jpeg",
-                        "almirah_4"));
-
-        productlist
-                .add(new Product(
-                        "l Collapsible Wardrobe",
-                        "Everything Imported Carbon Steel Collapsible Wardrobe",
-                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
-                        "2999",
-                        "20",
-                        "1999",
-                        "0",
-                        "http://img5a.flixcart.com/image/collapsible-wardrobe/w/c/k/srw-116a-aluminium-pindia-maroon-wardrobe-400x400-imaeb9g4945dqunu.jpeg",
-                        "almirah_5"));
-
-        productlist
-                .add(new Product(
-                        "Metal Free Standing Wardrobe",
-                        "Everything Imported Carbon Steel Collapsible Wardrobe",
-                        "Portable Wardrobe Has Hanging Space And Shelves Which Are Very Practical And The Roll Down Cover Keeps The Dust Out",
-                        "2999",
-                        "20",
-                        "1999",
-                        "0",
-                        "http://img6a.flixcart.com/image/wardrobe-closet/f/b/p/srw-167-jute-pindia-purple-400x400-imaeb9g4d8uvatck.jpeg",
-                        "almirah_6"));
-
-        productMap.put("Almirah", productlist);
-
-        productMap.put("Almirah", productlist);
 
         CenterRepository.getCenterRepository().setMapOfProductsInCategory(productMap);
 
